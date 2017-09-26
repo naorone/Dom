@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    .verde{
+        color:green;
+    }
+    </style>
+
+    <script>
+        function modificar()
+        {
+            console.log("modificando html");
+
+            //añadir texto a #parrafo1
+            var parrafo1= document.getElementById("parrafo1");
+            parrafo1.textContent = "Texto cambiado"
+        }
+
+        function modificarEtiq()
+        {
+            console.log("modificando html");
+
+            //añadir texto a #parrafo1
+            var parrafos= document.getElementsByTagName("p");
+
+            for(var a= 0; a<parrafos.length; a++)
+            {
+                parrafos[a].textContent = "cambiando texto";
+            }
+
+
+        }
+
+        function modificarByName()
+        {
+            console.log("modificarByName");
+
+            //añadir texto a #parrafo1
+            var titulo= document.getElementsByName("pa");
+
+
+            for(var a= 0; a<titulo.length; a++)
+            {
+                titulo[a].textContent = "texto name";
+            }
+        }
+
+
+
+    </script>
+
+    <title>Dom</title>
+</head>
+<body>
+
+    <h1 name="pa">Hola</h1>
+    <a class="verde" href="https://www.google.es"> link</a>
+    <p id="parrafo1">Parrafo asfklñsjñgsiñjutyo</p>
+    <p id="parrafo2">Parrafo3 </p>
+    <p>Parrafo3 asfklñsjñgsiñjutyo</p>
+    <input type="button" onclick="modificar()"; value="modificar"/>
+    <input type="button" onclick="modificarEtiq()"; value="modificar etiq"/>
+    <input type="button" onclick="modificarByName()"; value="modificar name"/>
+
+
+</body>
+</html>
